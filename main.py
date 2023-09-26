@@ -22,7 +22,7 @@ def index():
     items = Item.query.order_by(Item.price).all()
     return render_template('index.html', data=items)
 
-#HUI
+
 @app.route('/create', methods=['POST', 'GET'])
 def create():
     if request.method == "POST":
