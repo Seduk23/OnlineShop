@@ -1,0 +1,53 @@
+from waitress import serve
+import mimetypes
+
+from templates_view.home_view import HomeView
+from templates_view.contact_us_view import ContactUsView
+from render_template import render_template
+from templates_view.contast_us2_view import ContactUs2View
+
+def serve_file(path, start_response):
+    new_path = path.replace('/', '', 1)
+    try:
+        with open(new_path, 'rb') as f:
+            content = f.read()
+        mime_type, _ = mimetypes.guess_type(new_path)
+        if mime_type is None:
+            mime_type = 'application/octet-stream'
+        start_response("200 OK", [("Content-type", mime_type)])
+        return [content]
+    except FileNotFoundError:
+        start_response("404 Not Found", [("Content-type", "text/plain")])
+        return [b"404 Not Found"]
+    
+urls = {
+    '/': HomeView,
+    '/contact': ContactUsView,
+    '/contact/2': ContactUs2View,
+}
+
+def app(environ, start_response):
+    path = environ.get("PATH_INFO")
+    print(path)
+    
+    if path.startswith("/src/"):
+        return serve_file(path, start_response)
+    
+    if path in urls:
+        view_class = urls[path]
+        view_instance = view_class()
+        data = view_instance.get(environ)
+        content_type = view_instance.content_type
+    else:
+        data = render_template(template_name='templates/404.html', context={})
+        content_type = 'text/html; charset=UTF-8'
+    
+    data = data.encode("utf-8")
+    start_response(
+        f"200 OK", [
+            ("Content-type", content_type),
+        ]
+    )
+    return iter([data])
+
+serve(app)
