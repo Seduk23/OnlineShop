@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.location.href = "/";
                 // Вывод результата в консоль для отладки
                 console.log(result);
+                alert("Ваще сообщение отправлено!")
             } else {
                 // Вывод ошибки при неудачном ответе
                 console.error('Ошибка при отправке');
@@ -47,20 +48,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     // Функция для отображения уведомления
-    function showNotification(message, isError = false) {
-        var notificationElement = document.getElementById('notification');
-        var notificationMessageElement = document.getElementById('notificationMessage');
-
-        // Установка текста уведомления
-        notificationMessageElement.textContent = message;
-
-        // Установка цвета уведомления в зависимости от успешности операции
-        notificationElement.style.backgroundColor = isError ? '#f44336' : '#4CAF50';
-        notificationElement.style.display = 'block';
-
-        // Добавление обработчика события для закрытия уведомления
-        document.getElementById('closeNotification').addEventListener('click', function () {
-            notificationElement.style.display = 'none';
-        });
-    }
 });

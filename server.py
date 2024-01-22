@@ -78,7 +78,6 @@ def app(environ, start_response):
         data = render_template(template_name='templates/404.html', context={})
         data = data.encode("utf-8")
 
-
     # Определение MIME-типа и кодировки для ответа
     mime_type, encoding = mimetypes.guess_type(path)
     content_type = mime_type if mime_type else 'text/html'
