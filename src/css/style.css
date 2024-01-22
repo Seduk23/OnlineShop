@@ -1,0 +1,195 @@
+/* CSS (styles.css) */
+body {
+    background-image: url('/src/images/back.jpg');
+    font-family: Roboto, sans-serif;
+    background-color: #333; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000; 
+}
+
+header {
+    background-color: #222; 
+    color: #fff;
+    padding: 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card {
+    font-family: Bodoni, serif;
+    font-size: 22px;
+    cursor: pointer;
+    width: 320px;
+    border: 1px solid #fffefe;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 50px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: linear-gradient(45deg, #555, #333); 
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.card-content {
+    padding: 30px;
+}
+
+.card-title,
+.card-price,
+.card-description {
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-title,
+.card:hover .card-price,
+.card:hover .card-description {
+    color: #f8eded;
+}
+.about {
+    font-family: Bodoni, serif;
+    font-size: 20px;
+    border: 5px solid #0e0101;
+    border-radius: 240px, 200px;
+    overflow: hidden;
+    text-align: center; /* Центрирует текст внутри блока .about */
+    justify-content: center;
+    max-width: 1200px; /* Установите максимальную ширину контейнера по вашему усмотрению */
+    margin: 0 auto;
+    margin-bottom: 25px; /* Добавление отступа снизу */
+    line-height: 1.5;
+}
+.name{
+    font-family: Bodoni, serif;
+    font-size: 20px;
+    margin-top: 10px; /* Измените значение в соответствии с вашими предпочтениями */
+    padding: 10px;
+    color: #000; /* Цвет текста вашего сообщения */
+    text-align: center;
+    max-width: 400px; /* Максимальная ширина вашего сообщения */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #555; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 18px;
+}
+
+.btn:hover {
+    background-color: #ecd58a; 
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+.card:hover .card-title,
+.card:hover .card-price,
+.card:hover .card-description {
+    color: #f8eded; 
+}
+#login-section {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 18px 20px;
+    background-color: #222;
+}
+#notification {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a0a0a0;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+#closeNotification {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.details-button {
+    background-color: #ecd58a;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: linear-gradient(45deg, #f0e3b7, #f5e6a5);
+}
+.aboutour{
+    max-width: 60px; /* Задайте максимальную ширину контейнера по вашему усмотрению */
+    margin: 0 auto; /* Это автоматически центрирует блок по горизонтали */
+    padding: 5px;
+}
+a.button-login {
+    background-color: #ecd58a;
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: #ecd58a;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+  }

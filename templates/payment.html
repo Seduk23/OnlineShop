@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/payment.css">
+    <title>Форма оплаты</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Курсы</a></li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/contact">Контакты</a></li>
+                <li><a href="/profile">Профиль</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Оплата курса</h1>
+    <form id="paymentForm">
+        <label for="amount">Сумма оплаты:</label>
+        <input type="number" id="amount" name="amount" required>
+        <label for="email">Введите ваш email, на который будет выслан курс:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="hidden" id="courseId" name="courseId" value="1">
+        <button type="button" id="payButton">Купить</button>
+    </form>
+    <div id="paymentResult"></div>
+    <script src="/src/js/payment.js"></script>
+    <footer>
+        <p>© 2024 Seduk.prod. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>

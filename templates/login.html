@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Техническая документация HTML-страницы "Онлайн курсы"-->
+
+    <!-- Установка кодировки документа -->
+    <meta charset="UTF-8">
+
+    <!-- Настройка для адаптивного масштабирования на мобильных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение внешнего файла стилей -->
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <!-- Установка заголовка страницы -->
+    <title>Онлайн курсы</title>
+</head>
+
+<body>
+    <!-- Заголовок и навигационное меню -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Ссылка на раздел "Курсы" -->
+                <li><a href="/">Курсы</a></li>
+
+                <!-- Ссылка на раздел "О нас" -->
+                <li><a href="/about">О нас</a></li>
+
+                <!-- Ссылка на раздел "Контакты" -->
+                <li><a href="/contact">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <!-- Раздел для входа в систему -->
+    </header>
+
+    <!-- Контейнер для отображения курсов -->
+    <div class="container"></div>
+    <section class="forum-auth">
+        <h2>Авторизация</h2>
+        <form id="loginForm" action="/" method="post">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="pass">Пароль:</label>
+            <input type="pass" id="pass" name="pass" required>
+
+            <button type="submit">Войти</button>
+        </form>
+    </section>
+    
+    <!-- Подключение внешнего JavaScript-скрипта -->
+    <script src="/src/js/login.js"></script>
+    <footer>
+        <p>© 2024 Seduk.prod. Все права защищены.</p>
+    </footer>
+    
+</body>
+
+</html>

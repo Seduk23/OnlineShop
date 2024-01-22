@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/payment.css">
+    <title>Профиль</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Курсы</a></li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/contact">Контакты</a></li>
+                <li class="profile-nav"><a href="/profile">Профиль</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="name"></div>
+    <div class="alert-message"></div>
+    <button class="btn-exit">Выйти</button>
+
+    <section class="auth">
+        <h2>Регистрация</h2>
+        <form id="registerForm" action="/register" method="post">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="passwordUser" name="password_user" required>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </section>
+    <footer>
+        <p>© 2024 Seduk.prod. Все права защищены.</p>
+    </footer>
+</body>
+<script src="../src/js/user.js"></script>
+<script src="../src/js/register.js"></script>
+
+</html>

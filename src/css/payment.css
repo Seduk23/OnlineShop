@@ -1,0 +1,102 @@
+body {
+    background-image: url('/src/images/back.jpg');
+    font-family: Roboto, sans-serif;
+    background-color: #faeed7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+header {
+    background-color: #000000;
+    color: #070500;
+    padding: 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.payment-form {
+    text-align: center;
+    
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+
+button {
+    padding: 10px 50px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#paymentResult {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.alert-message{
+    margin-top: 5px; /* Измените значение в соответствии с вашими предпочтениями */
+    padding: 10px;
+    color: #000; /* Цвет текста вашего сообщения */
+    text-align: center;
+    max-width: 400px; /* Максимальная ширина вашего сообщения */
+    font-size: 22px;
+}
+.name{
+    font-family: Roboto, sans-serif;
+    margin-top: 10px; /* Измените значение в соответствии с вашими предпочтениями */
+    padding: 10px;
+    color: #000; /* Цвет текста вашего сообщения */
+    text-align: center;
+    max-width: 400px; /* Максимальная ширина вашего сообщения */
+    font-size: 22px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Техническая документация HTML-страницы "Контакт с нами" -->
+
+    <!-- Установка кодировки документа -->
+    <meta charset="UTF-8">
+
+    <!-- Настройка для адаптивного масштабирования на мобильных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключение внешнего файла стилей -->
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <!-- Установка заголовка страницы -->
+    <title>Контакт с нами</title>
+</head>
+
+<body>
+    <!-- Заголовок и навигационное меню -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Ссылка на раздел "Курсы" -->
+                <li><a href="/">Курсы</a></li>
+
+                <!-- Ссылка на раздел "О нас" -->
+                <li><a href="/about">О нас</a></li>
+
+                <!-- Ссылка на раздел "Контакты" -->
+                <li><a href="/contact">Контакты</a></li>
+                <li><a href="/profile">Профиль</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Контейнер для отображения контактной информации и формы обратной связи -->
+    <div class="container">
+        <div class="contact-info">
+            <!-- Заголовок раздела "Обратная связь" -->
+            <h3>Обратная связь</h3>
+
+            <!-- Форма для отправки сообщения -->
+            <form id="contactForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+
+            <!-- Уведомление о статусе отправки формы -->
+            <div id="notification" style="display: none;">
+                <p id="notificationMessage"></p>
+                <button id="closeNotification">Закрыть</button>
+            </div>
+
+            <!-- Контактная информация -->
+            <div>
+                <p><strong>Email:</strong> vanyasedih@ya.ru</p>
+                <p><strong>Телефон:</strong> +7 (904)-529-68-10</p>
+            </div>
+
+            <!-- Адрес -->
+            <div>
+                <p><strong>Адрес:</strong> Россия, гор. Курск, ул. Лысая гора 1</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение внешнего JavaScript-скрипта -->
+    <script src="/src/js/contact.js"></script>
+    <footer>
+        <p>© 2024 Seduk.prod. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>
