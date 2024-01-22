@@ -129,3 +129,28 @@ def create_user(login, password_user):
     except Exception as ex:
         print("Connection refused...")
         print(ex)
+
+def create_support(idname, idemail, message):
+    try:
+        connection = pymysql.connect(
+            host=host,
+            port=3306,
+            user=user,
+            password=password,
+            database=db_name,
+            cursorclass=pymysql.cursors.DictCursor
+        )
+        print("successfully connected")
+
+        try:
+            with connection.cursor() as cursor:
+                create_support_query = "INSERT INTO `support` (`idname`,`idemail`,`message`) VALUES (%s,%s,%s)"
+                cursor.execute(create_support_query, (idname, idemail, message))
+                connection.commit()
+                print("Support created:", cursor.lastrowid)
+        finally:
+            connection.close()
+
+    except Exception as ex:
+        print("Connection refused...")
+        print(ex)

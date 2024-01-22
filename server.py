@@ -7,11 +7,10 @@ from templates_view.user_view import UserView
 from render_template import render_template
 from serve_file import serve_static_file
 from get_json.get_json import GetCourses
-from submit import submit_form
 from templates_view.login_view import LoginView
 from get_json.get_user import GetUsers
 from templates_view.payment_view import PaymentView
-from db.connect import create_order, create_user
+from db.connect import create_order, create_user, create_support
 import mimetypes
 import cgi
 
@@ -22,7 +21,6 @@ urls = {
     '/about' : AboutView,           # Страница "О нас"
     '/api/courses' : GetCourses,    # API для получения курсов
     '/courses/' : CoursesView,      # Страница курсов
-    '/submit' : submit_form,        # Обработчик формы
     '/api/user': GetUsers,          # API для получения user
     '/login' : LoginView,           # Страница входа
     '/payment': PaymentView,        # Страница оплаты
@@ -40,6 +38,15 @@ def app(environ, start_response):
         email = form.getvalue('email', '')
         course = form.getvalue('course', '')
         create_order(username, email, course)
+        start_response("200 OK", [("Content-type", "application/json")])
+        return [b'{"status": "success"}']
+    
+    if environ['REQUEST_METHOD'] == 'POST' and path == '/api/create_support':
+        form = cgi.FieldStorage(fp=environ['wsgi.input'], environ=environ)
+        idname = form.getvalue('idname', '')
+        idemail = form.getvalue('idemail', '')
+        message = form.getvalue('message', '')
+        create_support(idname, idemail, message)
         start_response("200 OK", [("Content-type", "application/json")])
         return [b'{"status": "success"}']
 
@@ -70,10 +77,7 @@ def app(environ, start_response):
             return response
         data = render_template(template_name='templates/404.html', context={})
         data = data.encode("utf-8")
-    
-    # Обработка POST-запроса формы
-    if environ['REQUEST_METHOD'] == 'POST' and path == '/submit_form':
-        return submit_form(environ, start_response)
+
 
     # Определение MIME-типа и кодировки для ответа
     mime_type, encoding = mimetypes.guess_type(path)

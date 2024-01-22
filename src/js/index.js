@@ -32,7 +32,7 @@
                 // Заполнение элементов данными из ответа сервера
                 cardTitle.innerHTML = myjson[key].name;
                 cardDescription.innerHTML = myjson[key].description;
-                cardPrice.innerHTML = myjson[key].cost;
+                cardPrice.innerHTML = myjson[key].cost + "$";
                 btn.innerHTML = "Хочу";
                 btn.style.cursor = "pointer";
                 img.src = myjson[key].images;
