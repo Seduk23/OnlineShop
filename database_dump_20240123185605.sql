@@ -28,7 +28,7 @@ CREATE TABLE `courses_order` (
   `email` varchar(45) DEFAULT NULL,
   `course` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_order`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `courses_order` (
 
 LOCK TABLES `courses_order` WRITE;
 /*!40000 ALTER TABLE `courses_order` DISABLE KEYS */;
-INSERT INTO `courses_order` VALUES (8,'111111','larisa2930@ya.ru','Base'),(9,'111111','vanyasedih23@ya.ru','Base'),(10,'111111','larisa2930@ya.ru','Base');
+INSERT INTO `courses_order` VALUES (8,'111111','larisa2930@ya.ru','Base'),(9,'111111','vanyasedih23@ya.ru','Base'),(10,'111111','larisa2930@ya.ru','Base'),(11,'ваня','vanyasedih23@ya.ru','Base');
 /*!40000 ALTER TABLE `courses_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,7 +82,7 @@ CREATE TABLE `support` (
   `idemail` varchar(45) DEFAULT NULL,
   `message` text,
   PRIMARY KEY (`id-support`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,7 +91,7 @@ CREATE TABLE `support` (
 
 LOCK TABLES `support` WRITE;
 /*!40000 ALTER TABLE `support` DISABLE KEYS */;
-INSERT INTO `support` VALUES (1,'vanya','larisa2930@ya.ru','fgfgfg'),(2,'vanya','vanyasedih23@ya.ru','dfdfdfdf'),(3,'111111','vanyasedih@ya.ru','dfdfdf'),(4,'111111','sofia2003petrushina@mail.ru','ваыавыавыва');
+INSERT INTO `support` VALUES (1,'vanya','larisa2930@ya.ru','fgfgfg'),(2,'vanya','vanyasedih23@ya.ru','dfdfdfdf'),(3,'111111','vanyasedih@ya.ru','dfdfdf'),(4,'111111','sofia2003petrushina@mail.ru','ваыавыавыва'),(5,'ваня','vanyasedih@ya.ru','Спасибо за курсы!'),(6,'ваня','vanyasedih@ya.ru','Спасибо за курсы!');
 /*!40000 ALTER TABLE `support` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,7 +107,7 @@ CREATE TABLE `user` (
   `login` varchar(45) DEFAULT NULL,
   `pass` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,7 +116,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (16,'vanya','123456'),(17,'vanya','123456'),(18,'vanya','123456'),(19,'vanya','123456'),(20,'vanya','123456'),(21,'12122','123456'),(22,'111111','123456'),(23,'111111','123456'),(24,'vanya','host');
+INSERT INTO `user` VALUES (16,'vanya','123456'),(17,'vanya','123456'),(18,'vanya','123456'),(19,'vanya','123456'),(20,'vanya','123456'),(21,'12122','123456'),(22,'111111','123456'),(23,'111111','123456'),(24,'vanya','host'),(25,'ваня','авваав');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -129,4 +129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-22 23:54:48
+-- Dump completed on 2024-01-23 18:56:14
